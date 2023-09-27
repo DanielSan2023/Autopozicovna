@@ -11,16 +11,17 @@ public class PonukaAut {
         ponuka.add(newAuto);
     }
        // odober auto z ponuky
-    public void removeAuto(Auto autoToRemove){
-        ponuka.remove(autoToRemove);
-    }
+
        //metoda vypise auto ,ktor0 s[ v ponuke List
     public void printAllAuta(){
-        System.out.println("Ponuka vozidiel :");
+        //System.out.println("Ponuka vozidiel :");
         for(Auto pomocne : ponuka){
             System.out.println(pomocne.getName() +" (" + pomocne.getPrice() + ".-€ )");
         }
     }
-
+    // Metoda pro odstranění auta ze seznamu na základě názvu
+    public void removeAutoByNazov(String nazovVozidla) {
+        ponuka.removeIf(auto -> auto.getName().equals(nazovVozidla));
+    }
 
 }
