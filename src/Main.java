@@ -14,10 +14,10 @@ public class Main {
 
 
         // pridam auto cez object newAuto do object ponukaAut
-        ponukaAut.addAuto(new Auto("Skoda", 5000, 4.5, 50000,545554));
-        ponukaAut.addAuto(new Auto("Volvo", 8250, 5.5, 150000,505050));
-        ponukaAut.addAuto(new Auto("Renault", 4900, 6.5, 80000,965487));
-        ponukaAut.addAuto(new Auto("BMW", 6500, 9.5, 250000,452458));
+        ponukaAut.addAuto(new Auto("Skoda", 5000, 4.5, 50000,"545554"));
+        ponukaAut.addAuto(new Auto("Volvo", 8250, 5.5, 150000,"505050"));
+        ponukaAut.addAuto(new Auto("Renault", 4900, 6.5, 80000,"965487"));
+        ponukaAut.addAuto(new Auto("BMW", 6500, 9.5, 250000,"452458"));
 
         // vypis ake vozidla su v ponuke
         System.out.println("Ponuka vozidiel:   " + LocalDate.now());
@@ -31,12 +31,17 @@ public class Main {
         ponukaAut.prepareAutoByNazov(nazovVozidla,menoMajitela);
         // vymaze vozidlo
         ponukaAut.removeAutoByNazov(nazovVozidla);
-
         System.out.println("Aktualizovaná ponuka vozidiel:   " + LocalDate.now());
         ponukaAut.printAllAuta();
-
         scanner.close();
+        Majitel majitel1 = new Majitel("Majitel1", new Auto("Skoda", 5000,
+                4.5, 50000,"545554"));
 
+        Majitel majitel2 = new Majitel("Majitel2", new Auto("Volvo", 8250,
+                5.5, 150000,"505050"));
+        ponukaAut.pridajMajitela(majitel1);
+        ponukaAut.pridajMajitela(majitel2);
+        ponukaAut.vypisDatabazu();
 
 
     }

@@ -4,20 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Majitel {
-    String menoMajitela;
-    String priezviskoMajitela;
-    String adresaMajitela;
-    List<Auto> zoznamMajitel = new ArrayList<>();
-   private  Auto auto;
+   private String menoMajitela;
+   private Auto auto;
 
 
-    public Majitel(String menoMajitela, String priezviskoMajitela,
-                   String adresaMajitela) {
+    public Majitel(String menoMajitela, Auto auto) {
         this.menoMajitela = menoMajitela;
-        this.priezviskoMajitela = priezviskoMajitela;
-        this.adresaMajitela = adresaMajitela;
-        this.zoznamMajitel = zoznamMajitel;
+        this.auto = auto;
     }
+
+    //region Gettery a settery pre atribúty meno a auto
 
     public String getMenoMajitela() {
         return menoMajitela;
@@ -27,21 +23,14 @@ public class Majitel {
         this.menoMajitela = menoMajitela;
     }
 
-    public String getPriezviskoMajitela() {
-        return priezviskoMajitela;
+    public Auto getAuto() {
+        return auto;
     }
 
-    public void setPriezviskoMajitela(String priezviskoMajitela) {
-        this.priezviskoMajitela = priezviskoMajitela;
-    }
-
-    public String getAdresaMajitela() {
-        return adresaMajitela;
-    }
-
-    public void setAdresaMajitela(String adresaMajitela) {
-        this.adresaMajitela = adresaMajitela;
+    public void setAuto(Auto auto) {
+        this.auto = auto;
     }
 
 
+    //endregion
 }

@@ -7,10 +7,10 @@ public class Auto {
     int price;
     double spotreba;
     int najazdeneKm;
-    int numberVin;
+    String numberVin;
 
 
-    public Auto(String name, int price, double spotreba, int najazdeneKm,int numberVin) {
+    public Auto(String name, int price, double spotreba, int najazdeneKm,String  numberVin) {
         this.name = name;
         this.price = price;
         this.spotreba = spotreba;
@@ -50,11 +50,11 @@ public class Auto {
         this.najazdeneKm = najazdeneKm;
     }
 
-    public int getNumberVin() {
+    public String  getNumberVin() {
         return numberVin;
     }
 
-    public void setNumberVin(int numberVin) {
+    public void setNumberVin(String  numberVin) {
         this.numberVin = numberVin;
     }
 
