@@ -22,16 +22,16 @@ public class Main {
         // vypis ake vozidla su v ponuke
         System.out.println("Ponuka vozidiel:   " + LocalDate.now());
         ponukaAut.printAllAuta();
-        System.out.println("Zadajte meno nového majitela vozidla:");
+        System.out.print("Zadajte meno nového majitela vozidla:");
         String menoMajitela = scanner.nextLine();
-        System.out.println("Zadaj názov vozidla, ktoré chce Pán/Pani "+menoMajitela + "  kúpiť:  ");
+        System.out.print("Zadaj názov vozidla, ktoré chce Pán/Pani "+menoMajitela + "  kúpiť:  ");
         String nazovVozidla = scanner.nextLine();
 
         // vypise ktore si vybral majitel
         ponukaAut.prepareAutoByNazov(nazovVozidla,menoMajitela);
         // vymaze vozidlo
         ponukaAut.removeAutoByNazov(nazovVozidla);
-
+        System.out.println("---------------------------------------------------------");
         System.out.println("Aktualizovaná ponuka vozidiel:   " + LocalDate.now());
         ponukaAut.printAllAuta();
 

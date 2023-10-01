@@ -34,8 +34,8 @@ public class PonukaAut {
                 System.out.println("Cena: " + auto.getPrice() + " €");
                 System.out.println("Spotřeba: " + auto.getSpotreba() + " l/100km");
                 System.out.println("Najeté kilometry: " + auto.getNajazdeneKm());
-                System.out.println("Vin"+auto.getNumberVin());
-                System.out.println("Je predané Pánovi/Pani:"+menoMajitela);
+                System.out.print("Vin"+auto.getNumberVin());
+                System.out.println("  Je predané Pánovi/Pani:"+menoMajitela);
                 return; // Ukončíme smyčku po nalezení odpovídajícího automobilu
             }
         }
